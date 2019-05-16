@@ -33,6 +33,7 @@ public:
 		~Personagem(){
 				delete []poderes;
 		}
+    /*
 		Personagem(const Personagem& p){
 			nome = p.nome;
 			nomeVidaReal = nomeVidaReal;
@@ -42,10 +43,11 @@ public:
 	  			poderes[i] = p.poderes[i];
 
 		}
+    */
 		string getNome(){
 			return nome;
 		}
-        bool adicionarSuperPoder(SuperPoder &sp){
+        bool adicionarSuperPoder(SuperPoder& sp){
 				if (nPoderes>=4)
 					return false;
 				poderes[nPoderes++] = &sp;
