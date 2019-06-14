@@ -65,7 +65,7 @@ struct BST{
     }
 
     if(find->left or find->right){
-      Node* subs = findCandidates(val);;
+      Node* subs = findCandidates(val);
       int newkey = subs->key;
       remove(subs->key);
       find->key = newkey;
