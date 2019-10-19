@@ -21,9 +21,6 @@ class redeAmigos{
     return max(qntAmigos-1, 0);
   }
   public:
-    ~redeAmigos(){
-      amigos.clear();
-    }
     int getSize(){
       return amigos.size();
     }
