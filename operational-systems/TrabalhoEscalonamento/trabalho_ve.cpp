@@ -1,3 +1,5 @@
+// Grupo: Gabriel Bozza, Navarro e Ricardo Silveira
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -47,7 +49,7 @@ int main() {
   cout << "No de processos: ";
   cin >> totalProcessos;
   for(int i = 1; i <= totalProcessos; i++) {
-    cout << "Processo P" << i << " (Burst de CPU, No de E/S): "; 
+    cout << "Processo P" << i-1 << " (Burst de CPU, No de E/S): "; 
     cin >> surtoCPU >> operacoes_io;
     Processo novoProcesso = Processo(i, surtoCPU, operacoes_io);
     q0.push_back(novoProcesso);
@@ -88,7 +90,7 @@ int main() {
   for(int i = 0; i <= diagrama.size(); i++) {
     if(!i or i == diagrama.size() or diagrama[i] != diagrama[i-1]) {
       if(i == diagrama.size()) cout << i << "\tFinalizado";
-      else if(diagrama[i]) cout << i << "\t" << diagrama[i];
+      else if(diagrama[i]) cout << i << "\t" << diagrama[i]-1;
       else cout << i << "\tNenhum processo";
       cout << endl;
     }
