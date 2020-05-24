@@ -13,9 +13,9 @@ struct Processo {
 };
 
 vector<Processo> q0, q1, IO;
-int tempoAtual, totalProcessos, surtoCPU, operacoes_io;;
+int tempoAtual, totalProcessos, surtoCPU, operacoes_io;
 
-// diagrama[i] indica o programa que está sendo executado do tempo i até i+1 (0 se não houver processo executando naquele momento);
+// diagrama[i] indica o programa que está sendo executado do tempo i até i+1 (0 se não houver processo executando naquele momento)
 vector<int> diagrama;
 
 void executarProcesso(int numeroFila) {
