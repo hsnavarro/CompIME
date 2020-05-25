@@ -27,7 +27,7 @@ class DataExtractor {
 
     // extract Data from CSV
     // expect first row with column names
-    // other rows with doubles or null values
+    // other rows with numeric or null values
     void csvReader(string csvName) {
       fstream fileRead;
       fileRead.open(csvName);
