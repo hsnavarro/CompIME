@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <iostream>
+#include <ostream>
+#include <fstream>
+#include <iomanip>
 using namespace std;
 
 class DataExtractor {
@@ -56,7 +60,6 @@ class DataExtractor {
     }
 
   public:
-    
     DataExtractor(string csvName) {
       csvReader(csvName);
     }
@@ -105,7 +108,6 @@ class DataExtractor {
 };
 
 DataExtractor* DataExtractor::dataExtractorInstance = nullptr;
-string s;
 
 int main() {
   DataExtractor* test = DataExtractor::getInstance("Taxa de Abandono - Limpa.csv");
