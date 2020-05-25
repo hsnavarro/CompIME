@@ -70,7 +70,7 @@ class DataExtractor {
     } 
 
     void checkNumberOfColumns(int columnNumber) {
-      if(columnNumber < 1 or columnNumber > numberOfColumns) throw invalid_argument("Input not in [1 .. " + to_string(numberOfColumns) + "] range");
+      if(columnNumber < 1 or columnNumber > numberOfColumns) throw invalid_argument("Input not in [1 .. " + to_string(numberOfColumns) + "]");
     }
 
     // expect integers from 1 to numberOfColumns
@@ -91,9 +91,13 @@ class DataExtractor {
 
     // Created for testing
     void interfaceSimulator() {
-      int columnNumber;
+      string input;
       cout << "Inform column number: " << endl;
-      cin >> columnNumber;
+      cin >> input;
+
+      for(auto ch : input) if(!(ch >= '0' and ch <= '9')) throw invalid_argument("Input isn't an integer");
+
+      int columnNumber = stoi(input);
 
       checkNumberOfColumns(columnNumber);
       
