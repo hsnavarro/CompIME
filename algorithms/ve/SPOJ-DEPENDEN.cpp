@@ -18,7 +18,6 @@ void reset(){
 }
 
 int main(){
-  ios_base::sync_with_stdio(0), cin.tie(0);
   while(~scanf("%d", &n) and n){
     reset();
     for(int i = 1; i <= n; i++){
